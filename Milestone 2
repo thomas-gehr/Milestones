@@ -1,0 +1,28 @@
+def find_splice(dna_motif, dna):
+    found_position = [-1]
+    for i in range(len(dna_motif)):
+        found_position.append(dna.find(dna_motif[i], found_position[i]+1))
+    del found_position[0]
+    if -1 in found_position:
+        return []
+    return found_position
+
+def shared_motif(dna_list):
+
+def get_edges(dna_dict):
+    keylist = list(dna_dict.keys())
+    match_list =[]
+    for i in keylist:
+        for key in keylist:
+            if dna_dict[i][-3:] == dna_dict[key][0:3] and dna_dict[i] != dna_dict[key]:
+                m = (i,key)
+                match_list.append(m)
+    return match_list
+    
+def assemble_genome(dna_list):
+
+def perfect_match(rna):
+
+def random_genome(dna, gc_content):
+
+def rev_palindrome(dna):
