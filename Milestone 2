@@ -8,6 +8,12 @@ def find_splice(dna_motif, dna):
     return found_position
 
 def shared_motif(dna_list):
+    possible_substring = ''
+    for i in range(len(dna_list)-1):
+        for j in range(len(dna_list[0])):
+            if dna_list[0][j] in dna_list[i+1]:
+                possible_substring.append(dna_list[0][j])
+    #???
 
 def get_edges(dna_dict):
     keylist = list(dna_dict.keys())
