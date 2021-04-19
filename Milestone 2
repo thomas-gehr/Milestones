@@ -12,7 +12,8 @@ def shared_motif(dna_list):
     for letter in dna_list[0]:
         for string in dna_list:
             if letter in string:
-                common_substring += letter
+                continue
+        common_substring += letter
 
 def get_edges(dna_dict):
     keylist = list(dna_dict.keys())
