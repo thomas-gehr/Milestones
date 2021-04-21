@@ -22,6 +22,7 @@ def shared_motif(dna_list):
                     continue
                 possible_substring += dna_list[0][j]
     common_substring += letter
+    NOT FINISHED
 
 def get_edges(dna_dict):
     keylist = list(dna_dict.keys())
