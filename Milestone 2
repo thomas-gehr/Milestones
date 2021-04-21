@@ -38,7 +38,6 @@ def assemble_genome(dna_list):
 def perfect_match(rna):
 
 def random_genome(dna, gc_content):
-    def random_genome(dna, gc_content):
     import math
     probabilities = []
     for probability in gc_content:
