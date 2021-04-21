@@ -51,5 +51,20 @@ def perfect_match(rna):
     return perfect_matchings
 
 def random_genome(dna, gc_content):
+    import math
+    probabilities = []
+    for probability in gc_content:
+        result = 0
+        for letter in dna:
+            if letter == 'G':
+                result += math.log10(probability/2)
+            if letter == 'C':
+                result += math.log10(probability/2)
+            if letter == 'A':
+                result += math.log10((1-probability)/2)
+            if letter == 'T':
+                result += math.log10((1-probability)/2)
+        probabilities.append(result)
+    return probabilities
 
 def rev_palindrome(dna):
