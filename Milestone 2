@@ -36,6 +36,26 @@ def get_edges(dna_dict):
 def assemble_genome(dna_list):
 
 def perfect_match(rna):
+    import math
+    countU = 0
+    countA = 0
+    countC = 0
+    countG = 0
+    for i in range(len(rna)):
+        if rna[i] == 'U':
+            countU += 1
+        if rna[i] == 'A':
+            countA += 1
+        if rna[i] == 'C':
+            countC += 1
+        if rna[i] == 'G':
+            countG += 1
+    perfect_matchings = math.factorial(countU) * math.factorial(countC)
+    if countU != countA:
+        perfect_matchings = 0
+    if countC != countG:
+        perfect_matchings = 0
+    return perfect_matchings
 
 def random_genome(dna, gc_content):
     import math
